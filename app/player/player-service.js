@@ -34,6 +34,10 @@ angular.module('jamstash.player.service', ['ngLodash'])
             } else {
                 player._playingSong = song;
             }
+	    var audioElement=document.getElementById('html5audio');
+            console.log(song);
+            audioElement.src=song.url;
+            audioElement.play();
         },
 
         togglePause: function () {
